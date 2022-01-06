@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/subhash-malireddy/ehg-test/static/css/main.328a0f42.css",
+    "main.js": "/subhash-malireddy/ehg-test/static/js/main.e75777bf.js",
+    "static/js/787.3d3c1851.chunk.js": "/subhash-malireddy/ehg-test/static/js/787.3d3c1851.chunk.js",
+    "index.html": "/subhash-malireddy/ehg-test/index.html",
+    "main.328a0f42.css.map": "/subhash-malireddy/ehg-test/static/css/main.328a0f42.css.map",
+    "main.e75777bf.js.map": "/subhash-malireddy/ehg-test/static/js/main.e75777bf.js.map",
+    "787.3d3c1851.chunk.js.map": "/subhash-malireddy/ehg-test/static/js/787.3d3c1851.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.328a0f42.css",
+    "static/js/main.e75777bf.js"
+  ]
+}
