@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -33,12 +33,12 @@ useEffect(() => {
 }, [])
   return (
     <div style={styles.centerContent}>
-    <Router>
+    <HashRouter>
           <Routes>
             <Route exact path="/" element={<Basic />}  />
             <Route exact path="/creative" element={<Creative />}  />
           </Routes>
-    </Router>
+    </HashRouter>
     </div>
   );
 }
