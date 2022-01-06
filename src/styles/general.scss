@@ -1,0 +1,8 @@
+.my-canvas{
+    border: 1px solid transparent;
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.36); 
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.36);
+    &:hover{
+        cursor: pointer;
+    }
+}

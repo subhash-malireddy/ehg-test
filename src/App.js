@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import './App.scss';
+
+//components
+import Basic from "./components/pages/Basic";
+import Creative from "./components/pages/Creative";
 
 function App() {
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const styles = {
+    centerContent: {
+        display: "grid",
+        justifyContent: "center",
+        alignContent: "center",
+        minHeight: `${windowHeight}px`
+    }
+}
+
+useEffect(() => {
+  setWindowHeight(window.innerHeight)
+  window.addEventListener('resize', () => {
+      setWindowHeight(window.innerHeight)
+  })
+
+  return () => {
+      window.removeEventListener('resize', setWindowHeight)
+  }
+}, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.centerContent}>
+    <Router>
+          <Routes>
+            <Route exact path="/" element={<Basic />}  />
+            <Route exact path="/creative" element={<Creative />}  />
+          </Routes>
+    </Router>
     </div>
   );
 }
