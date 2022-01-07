@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ehg-test/static/css/main.7207c44b.css",
-    "main.js": "/ehg-test/static/js/main.c7e66d3f.js",
+    "main.css": "/ehg-test/static/css/main.ea17613a.css",
+    "main.js": "/ehg-test/static/js/main.b9762743.js",
     "static/js/787.3d3c1851.chunk.js": "/ehg-test/static/js/787.3d3c1851.chunk.js",
     "index.html": "/ehg-test/index.html",
-    "main.7207c44b.css.map": "/ehg-test/static/css/main.7207c44b.css.map",
-    "main.c7e66d3f.js.map": "/ehg-test/static/js/main.c7e66d3f.js.map",
+    "main.ea17613a.css.map": "/ehg-test/static/css/main.ea17613a.css.map",
+    "main.b9762743.js.map": "/ehg-test/static/js/main.b9762743.js.map",
     "787.3d3c1851.chunk.js.map": "/ehg-test/static/js/787.3d3c1851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7207c44b.css",
-    "static/js/main.c7e66d3f.js"
+    "static/css/main.ea17613a.css",
+    "static/js/main.b9762743.js"
   ]
 }
