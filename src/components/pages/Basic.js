@@ -1,30 +1,47 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 // import * as cSketch from 'canvas-sketch'
 import '../../styles/general.scss'
 
+import createColors from '../../utils/createColors'
 
 
 
 function Basic() {
 
     const canvasRef = useRef()
+    // const [colors, setColors] = useState([])
+    const [imgdwnldhref, setimgdwnldhref] = useState("")
 
-    const drawCircle = () => {
+    var startTime = performance.now()
+    const colors = createColors();
+    var endTime = performance.now()
+    console.log(`Call to createColors took ${endTime - startTime} milliseconds`)
+
+    // const handleSetColors = async () => {
+    //     await setColors(createColors())
+    // }
+
+    const plotcolors = () => {
         const ctx = canvasRef.current.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-        ctx.stroke();
+        const imgData = new ImageData(colors, 256, 128)
+        ctx.putImageData(imgData, 0, 0)
+    }
+    
+    const downloadCanvasAsImage = (e) => {
+        const href = canvasRef.current.toDataURL('image/jpg');
+        setimgdwnldhref(href)
+        // console.log(canvasRef.current.toDataURL)
     }
 
     useEffect(() => {
-        drawCircle()
-        console.log(canvasRef.current)
-    }, [])
+        plotcolors()
+    })
 
     return (
-        <canvas ref={canvasRef} width="256" height="128" className='my-canvas'>
-
-        </canvas>
+        <div>
+            <canvas ref={canvasRef} width="256" height="128" className='my-canvas'></canvas>
+            <a href={imgdwnldhref} onClick={downloadCanvasAsImage} download="download" className="dwnld-link">Download as Image</a>
+        </div>
     )
 }
 
