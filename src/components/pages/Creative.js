@@ -65,7 +65,7 @@ function generateParticles(colors, canvasHeight, canvasWidth, canvasContext, cur
         canvasHeight / 2,
         1,
         `rgba(${colors[i]}, ${colors[i+1]}, ${colors[i+2]}, ${colors[i+4]})`,
-        10,
+        0.001,
         canvasContext,
         cursorX,
         cursorY
