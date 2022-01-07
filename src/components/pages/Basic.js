@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-// import * as cSketch from 'canvas-sketch'
 import '../../styles/general.scss'
 
 import createColors from '../../utils/createColors'
@@ -22,13 +21,13 @@ function Basic() {
     // }
 
     const plotcolors = () => {
-        const ctx = canvasRef.current.getContext("2d");
+        const ctx = canvasRef.current.getContext("2d")
         const imgData = new ImageData(colors, 256, 128)
         ctx.putImageData(imgData, 0, 0)
     }
     
     const downloadCanvasAsImage = (e) => {
-        const href = canvasRef.current.toDataURL('image/jpg');
+        const href = canvasRef.current.toDataURL('image/jpg')
         setimgdwnldhref(href)
         // console.log(canvasRef.current.toDataURL)
     }
