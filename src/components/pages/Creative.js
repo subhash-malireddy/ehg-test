@@ -18,12 +18,12 @@ function Creative() {
         setCanvasDimensions([window.innerWidth*0.8, window.innerHeight])
     }
 
-    const setCrsrCoords = (e) => {
-        setCursorCoords({
-            cursorX: e.clientX,
-            cursorY: e.clientY
-        })
-    }
+    // const setCrsrCoords = (e) => {
+    //     setCursorCoords({
+    //         cursorX: e.clientX,
+    //         cursorY: e.clientY
+    //     })
+    // }
 
     const animate = ()=>{
         requestAnimationFrame(animate);
